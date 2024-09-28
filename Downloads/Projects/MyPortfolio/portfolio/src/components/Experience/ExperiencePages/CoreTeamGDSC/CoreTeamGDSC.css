@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+.core-team-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #87ceeb 10%, #5a6ae1 40%, #2e41ca 60%, #00008b 70%, #000000 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+.heading-container {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.4;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.hidden-text {
+  opacity: 0;
+  animation: revealText 3s forwards;
+}
+
+@keyframes revealText {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.image-quote-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  overflow: hidden; 
+  padding: 2rem;
+}
+
+.reveal-image {
+  width: 15rem;
+  transition: transform 0.5s ease;
+}
+
+.sriracha-regular {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.initial-text {
+  font-size: 6rem; /* Adjust size as needed */
+  color: #fff;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  font-family: "Sriracha";
+  text-align: center;
+}
+
+.reveal-text {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  max-width: 100%; /* Adjust for better text fit */
+  font-size: 1rem; /* Smaller font size */
+  word-wrap: break-word; /* Ensure text wraps within the container */
+  line-height: 1.5; /* Adjust line height for better readability */
+  opacity: 0;
+  margin-top: -2rem;
+}
+
+.image-quote-wrapper:hover .initial-text {
+  opacity: 0; /* Hide initial text immediately */
+}
+
+.image-quote-wrapper:hover .reveal-image {
+  transform: translateX(-10%); /* Adjust to prevent overflow */
+}
+
+.image-quote-wrapper:hover .reveal-text {
+  transform: translateX(0); /* Bring text to the right */
+  opacity: 1; /* Ensure text is visible */
+}
+
+.image-quote-wrapper:not(:hover) .reveal-text {
+  opacity: 0; /* Hide text immediately when not hovering */
+}
+
+blockquote {
+  font-style: italic;
+  margin: 0;
+  padding: 1rem;
+  border-left: 4px solid #a993fe;
+  color: #fff;
+  font-size: 0.9rem; /* Smaller font size for blockquote */
+}
+
+.quote-text {
+  margin: 0;
+}
+
+footer {
+  text-align: right;
+  font-size: 0.9rem; /* Smaller font size for the author name */
+  color: #532de9;
+}
+
+.onboarding-sec {
+  display: flex;
+  flex-direction: row; /* Image and text side by side */
+  padding: 2rem;
+  justify-content: flex-start; /* Align elements to the left */
+  align-items: flex-start; /* Align content vertically at the top */
+  margin-top: 2rem;
+}
+
+.onboarding-sec .image-container-1 {
+  display: flex;
+  flex-direction: column; /* Stack image(s) in a column */
+  align-items: flex-start; /* Align the image(s) to the left */
+}
+
+.onboarding-sec img {
+  width: 60%; /* Adjust the width of the image */
+  height: auto;
+  margin-bottom: 1.5rem; /* Space between images if more than one */
+  border: 3px solid #fff;
+  border-radius: 5px;
+}
+
+.content {
+  text-align: left; /* Align text to the left */
+  max-width: 40%; /* Optional: Restrict text width to keep layout balanced */
+  margin-top: 13rem;
+  transform: translateX(-20%);
+}
+
+.content h3{
+  font-size: 2rem;
+}
+
+.content p{
+  font-style: italic;
+}
+
+.event-hosted {
+  display: flex;
+  flex-direction: row; /* Image and text side by side */
+  padding: 2rem;
+  justify-content: flex-start; /* Align elements to the left */
+  align-items: flex-start; /* Align content vertically at the top */
+  margin-top: 2rem;
+  margin-left: 6rem;
+}
+
+.event-hosted .written-text {
+  text-align: left; /* Align text to the left */
+  max-width: 40%; /* Restrict text width to keep layout balanced */
+  margin-right: 2rem; /* Space between text and image */
+  margin-top: 11rem;
+  transform: translateX(0); /* Reset the transform */
+}
+
+.event-hosted h3 {
+  font-size: 2rem;
+}
+
+.event-hosted p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.event-hosted .emcee-photo {
+  display: flex;
+  flex-direction: column; /* Stack image(s) in a column */
+  align-items: flex-start; /* Align the image(s) to the left */
+  margin-left: 8rem;
+}
+
+.event-hosted img {
+  width: 100%; /* Adjust the width of the image */
+  height: auto;
+  margin-bottom: 1.5rem; /* Space between images if more than one */
+  border: 3px solid #fff;
+  border-radius: 5px;
+  margin-top: 3rem;
+}
+
+.cert-2324 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 2rem; /* Space between columns */
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.cert-2324 .written-text {
+  text-align: left; /* Align text to the left */
+  margin-top: 3.5rem;
+}
+
+.cert-2324 h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+.cert-2324 p {
+  font-style: italic;
+  margin-top: 1rem;
+}
+.cert-2324 .cert-2324-photo {
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+}
+
+.cert-2324 img {
+  width: 100%; 
+  height: auto; 
+  max-width: 600px; 
+  border: 3px solid #fff;
+  border-radius: 5px;
+}
+
+.button-container {
+  text-align: center; 
+}
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 4px;
+  font-weight: bold;
+  border: none;
+  outline: 1.5px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  color: #a993fe;
+  background: #000;
+  outline: 1.5px solid #a993fe;
+}
+
+@media(max-width: 1024px){
+  .content{
+    margin-top: 6rem;
+  }
+  .event-hosted{
+    margin-top: -10rem;
+    margin-bottom: 4rem;
+  }
+  .emcee-photo{
+    margin-top: 12rem;
+    width: 28rem;
+  }
+}
+
+@media(max-width: 768px){
+  .initial-text{
+    font-size: 4.5rem;
+  }
+  .image-container-1{
+    width: 35rem;
+    margin-left: 3rem;
+  }
+  .content{
+    margin-top: 1rem;
+  }
+  .event-hosted{
+    margin-top: -4rem;
+    margin-left: -1rem;
+  }
+  .emcee-photo{
+    margin-top: 18rem;
+    width: 22rem;
+  }
+  .written-text{
+    margin-left: 2rem;
+  }
+}
+
+@media(max-width: 600px) {
+  .image-quote-wrapper{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .initial-text{
+    font-size: 3.5rem;
+  }
+  .reveal-text {
+    max-height: 1000px; /* Adjust this value to accommodate full text */
+    opacity: 1;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  .onboarding-sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-container-1{
+    margin-left: 14rem;
+    width: 35rem;
+  }
+  .content{
+    margin-top: 1rem;
+    margin-left: 8rem;
+  }
+  .event-hosted{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30rem;
+    margin-left: -7rem;
+    margin-top: 8rem;
+  }
+  .emcee-photo{
+    margin-top: -52rem;
+    width: 20rem;
+  }
+  .written-text{
+    margin-top: 8rem;
+    margin-left: 4rem;
+  }
+  .cert-2324{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+  }
+  .cert-2324-photo{
+    margin-bottom: -2rem;
+  }
+}

@@ -1,0 +1,156 @@
+.google-cloud-certifications {
+  padding: 20px;
+  background: linear-gradient(270deg, #002a54 10%, #006699 50%, #0099CC 70%, #99CCFF 100%);
+}
+
+.google-cloud-certifications h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.search-bar-container {
+  display: flex;
+  gap: 20px; /* Reduced space for smaller screens */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  flex: 1; /* Make search bars take up equal space */
+  max-width: 400px;
+}
+
+.search-bar:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none;         /* Remove default outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional: Add a subtle shadow */
+}
+
+.badge-count-container {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Responsive grid */
+  gap: 20px;
+}
+
+.cert-card {
+  overflow: hidden;
+  position: relative; /* Important for absolute positioning of the skills */
+}
+
+.image-container {
+  position: relative; /* Establish positioning context for the skills */
+  overflow: hidden; /* Hide overflow when not hovered */
+}
+
+.cert-image {
+  width: 100%;
+  height: auto;
+  display: block; /* Ensures image takes the full width of the container */
+}
+
+.cert-skills {
+  position: absolute; /* Position skills section absolutely */
+  bottom: 0; /* Align to the bottom of the image */
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  color: white;
+  padding: 10px;
+  transform: translateY(100%); /* Move out of view */
+  transition: transform 0.3s ease; /* Smooth transition */
+  z-index: 1; /* Ensure it appears above other content */
+}
+
+.image-container:hover .cert-skills {
+  transform: translateY(0); /* Move into view on hover */
+}
+
+.image-container:hover .cert-image {
+  filter: blur(1px); /* Apply blur effect on hover */
+}
+
+.cert-info {
+  padding: 10px;
+  text-align: center; /* Center text in the card */
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 1.5rem; 
+}
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.65rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  color: #a993fe;
+  background: #000;
+}
+
+/* Responsive Media Queries */
+@media(max-width: 1024px) {
+  .cert-card {
+      margin-bottom: 20px;
+      text-align: center;
+  }
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Responsive grid */
+    gap: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-bar-container {
+      flex-direction: column; /* Stack search bars vertically */
+      gap: 15px; /* Reduce gap for smaller screens */
+      align-items: center;
+  }
+  .search-bar{
+    width: 40rem;
+  }
+  .image-container{
+    margin-left: 10px;
+  }
+  .cert-image{
+    width: 60%;
+  }
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Responsive grid */
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-bar {
+      max-width: 100%; /* Full width on small screens */
+      width: 20rem;
+  }
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Responsive grid */
+  }
+}

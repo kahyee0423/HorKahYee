@@ -1,0 +1,121 @@
+.alibaba-wrapper {
+    position: relative;
+    min-height: 100vh; 
+}
+  
+.aurora-gradient {
+    position: absolute; 
+    bottom: -50px; 
+    left: 0;
+    right: 0;
+    height: 1000px; 
+    z-index: -1; 
+}
+
+.alibaba-cert-heading{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 3rem;
+}
+
+.alibaba-cert-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 50px; 
+}
+  
+.cert-image {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and scale */
+}
+
+.cert-image-container {
+    position: relative;
+    width: 100%; 
+    text-align: left; 
+}
+
+.cert-image.image1 {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); 
+}
+
+.cert-image.image2 {
+    opacity: 0; /* Start with fully transparent */
+    transform: scale(0.6); /* Slightly scaled up for effect */
+}
+
+.cert-image-container:hover .image1 {
+    opacity: 0; /* Fade out image1 */
+}
+
+.cert-image-container:hover .image2 {
+    opacity: 1; /* Fade in image2 */
+}
+
+@media(max-width: 1024px){
+
+}
+
+@media(max-width: 768px) {
+    .alibaba-cert-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; /* Adjust spacing if necessary */
+    }
+
+    .cert-image {
+        width: 100%; /* Increase width for a larger appearance */
+        height: auto; /* Maintain aspect ratio */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+        transform: scale(1.1); /* Slightly scale up for emphasis */
+        margin-bottom: 1rem;
+    }
+
+    .cert-image-container {
+        overflow: hidden; /* Prevent overflow if the image is larger */
+        position: relative;
+        width: 100%;
+        text-align: left;
+    }
+
+    .cert-image.image1 {
+        opacity: 1; /* Ensure image 1 is visible */
+        transform: scale(1.5); /* Make image 1 larger */
+    }
+
+    .cert-image.image2 {
+        opacity: 0; /* Start with fully transparent */
+        transform: scale(0.9); /* Slightly smaller when not hovered */
+    }
+
+    .cert-image-container:hover .image1 {
+        opacity: 0; /* Fade out image 1 */
+    }
+
+    .cert-image-container:hover .image2 {
+        opacity: 1; /* Fade in image 2 */
+    }
+}
+
+
+@media(max-width: 600px){
+    .alibaba-cert-heading{
+        font-size: 1.5rem;
+    }
+    .alibaba-cert-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 20px;
+        padding: 50px; 
+    }
+    .cert-image {
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and scale */
+    }
+}
