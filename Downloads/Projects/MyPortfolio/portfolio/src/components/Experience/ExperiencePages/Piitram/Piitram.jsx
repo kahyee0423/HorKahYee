@@ -11,19 +11,19 @@ const Piitram = () => {
   }, []);
 
   const images = [
-    "/assets/piitramPic/img-01.jpg",
-    "/assets/piitramPic/group.jpg",
-    "/assets/piitramPic/img-09.jpg",
-    "/assets/piitramPic/img-04.jpg",
-    "/assets/piitramPic/img-05.jpg",
-    "/assets/piitramPic/img-02.jpg",
-    "/assets/piitramPic/img-06.jpg",
-    "/assets/piitramPic/img-08.jpg",
-    "/assets/piitramPic/img-15.jpg",
-    "/assets/piitramPic/img-17.jpg",
-    "/assets/piitramPic/upm_cert.jpg",
-    "/assets/piitramPic/award-badge.jpg",
-    "/assets/piitramPic/kmpk-cert.jpg"
+    `${process.env.PUBLIC_URL}/assets/piitramPic/img-01.jpg`,
+    `${process.env.PUBLIC_URL}/assets/piitramPic/group.jpg`,
+    `${process.env.PUBLIC_URL}/assets/piitramPic/img-09.jpg`,
+    `${process.env.PUBLIC_URL}/assets/piitramPic/img-04.jpg`,
+    `${process.env.PUBLIC_URL}/assets/piitramPic/img-05.jpg`,
+    `${process.env.PUBLIC_URL}/assets/piitramPic/img-02.jpg`,
+    `${process.env.PUBLIC_URL}/assets/piitramPic/img-06.jpg`,
+    `${process.env.PUBLIC_URL}/assets/piitramPic/img-08.jpg`,
+    `${process.env.PUBLIC_URL}/assets/piitramPic/img-15.jpg`,
+    `${process.env.PUBLIC_URL}/assets/piitramPic/img-17.jpg`,
+    `${process.env.PUBLIC_URL}/assets/piitramPic/upm_cert.jpg`,
+    `${process.env.PUBLIC_URL}/assets/piitramPic/award-badge.jpg`,
+    `${process.env.PUBLIC_URL}/assets/piitramPic/kmpk-cert.jpg`
   ];
 
   const settings = {
@@ -56,7 +56,7 @@ const Piitram = () => {
   <div className="piitram-wrapper">
     <section className="piitram-container">
       <div className="heading-container">
-        <h1>
+        <h1 className="boogaloo-regular">
           My Journey As a
           <span className="hidden-text"> Participant </span> 
           for PIITRAM 2023
@@ -83,10 +83,10 @@ const Piitram = () => {
 
       <div className="main-content">
           <div className="honours">
-              <img src="/assets/piitramPic/myipo-cert.jpg" alt="cert" />
-              <img src="/assets/piitramPic/upm_cert.jpg" alt="cert" />
-              <img src="/assets/piitramPic/kmpk-cert.jpg" alt="cert" />
-              <img src="/assets/piitramPic/medal.png" alt="" />
+              <img src={`${process.env.PUBLIC_URL}/assets/piitramPic/myipo-cert.jpg`} alt="cert" />
+              <img src={`${process.env.PUBLIC_URL}/assets/piitramPic/upm_cert.jpg`} alt="cert" />
+              <img src={`${process.env.PUBLIC_URL}/assets/piitramPic/kmpk-cert.jpg`} alt="cert" />
+              <img src={`${process.env.PUBLIC_URL}/assets/piitramPic/medal.png`} alt="" />
           </div>
 
           <div className="honours-text">
@@ -105,9 +105,9 @@ const Piitram = () => {
 
             <div className="cite-container">
               <h4>HONOURS AND ACHIEVEMENT</h4>
-                  <p><img src="/assets/piitramPic/icon.png" alt="" />Silver Medal</p>
-                  <p><img src="/assets/piitramPic/star.png" alt="" />Certified by MYIPO with the Certification No: CRLY2023W00396</p>
-                  <p><img src="/assets/piitramPic/ppl.png" alt="" />Innovation Award</p>
+                  <p><img src={`${process.env.PUBLIC_URL}/assets/piitramPic/icon.png`} alt="" />Silver Medal</p>
+                  <p><img src={`${process.env.PUBLIC_URL}/assets/piitramPic/star.png`} alt="" />Certified by MYIPO with the Certification No: CRLY2023W00396</p>
+                  <p><img src={`${process.env.PUBLIC_URL}/assets/piitramPic/ppl.png`} alt="" />Innovation Award</p>
             </div>
           </div>
       </div>

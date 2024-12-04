@@ -19,15 +19,12 @@ const slideInRight = {
 const Skills = () => {
   const [selectedSkill, setSelectedSkill] = useState(SKILLS[0]);
 
-  // Animation controls for left and right sections
   const controlLeft = useAnimation();
   const controlRight = useAnimation();
 
-  // Intersection observers for detecting when the components are in view
   const [refLeft, inViewLeft] = useInView({ threshold: 0.2 });
   const [refRight, inViewRight] = useInView({ threshold: 0.2 });
 
-  // Trigger animation when elements are in view
   useEffect(() => {
     if (inViewLeft) {
       controlLeft.start('visible');
@@ -46,7 +43,6 @@ const Skills = () => {
       <h5>Technical Proficiency</h5>
 
       <div className="skills-content">
-        {/* Slide-in left for skills cards */}
         <motion.div
           className="skills"
           ref={refLeft}
@@ -67,7 +63,6 @@ const Skills = () => {
           ))}
         </motion.div>
 
-        {/* Slide-in right for skill info */}
         <motion.div
           className="skills-info"
           ref={refRight}

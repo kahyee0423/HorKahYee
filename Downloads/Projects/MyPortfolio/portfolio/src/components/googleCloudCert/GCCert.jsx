@@ -1,31 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { GOOGLE_CLOUD_CERT } from '../../utils/data.js'; // Ensure this is an array
+import { GOOGLE_CLOUD_CERT } from '../../utils/data.js'; 
 import './GCCert.css';
 
 const GCCert = () => {
-    const [searchTerm, setSearchTerm] = useState(''); // For category search
-    const [skillSearchTerm, setSkillSearchTerm] = useState(''); // For skill search
-    const [filteredCerts, setFilteredCerts] = useState([]); // Initialize as empty array
+    const [searchTerm, setSearchTerm] = useState(''); 
+    const [skillSearchTerm, setSkillSearchTerm] = useState(''); 
+    const [filteredCerts, setFilteredCerts] = useState([]); 
     const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        // Initialize filteredCerts with GOOGLE_CLOUD_CERT data
-        setFilteredCerts(GOOGLE_CLOUD_CERT || []); // Set to an empty array if undefined
+        
+        setFilteredCerts(GOOGLE_CLOUD_CERT || []); 
     }, []);
 
-    // Combine filtering for both category and skills
+    
     useEffect(() => {
         const filtered = (GOOGLE_CLOUD_CERT || []).filter(cert => {
             const matchesCategory = cert.category.toLowerCase().includes(searchTerm.toLowerCase());
             const matchesSkill = cert.skills && cert.skills.some(skill => 
                 skill.skill.toLowerCase().includes(skillSearchTerm.toLowerCase())
             );
-            return matchesCategory && matchesSkill; // Include cert only if it matches both search terms
+            return matchesCategory && matchesSkill; 
         });
-        setFilteredCerts(filtered); // Update the filtered certificates
-    }, [searchTerm, skillSearchTerm]); // Re-run filtering when either search term changes
+        setFilteredCerts(filtered);
+    }, [searchTerm, skillSearchTerm]); 
 
     return (
         <section className="google-cloud-certifications">
@@ -48,7 +48,7 @@ const GCCert = () => {
             </div>
 
             <div className="badge-count-container">
-                <p>Total Skill Badges: {filteredCerts.length}</p> {/* Display the updated count */}
+                <p>Total Skill Badges: {filteredCerts.length}</p> 
             </div>
 
             <div className="cert-grid">
@@ -76,7 +76,7 @@ const GCCert = () => {
                         </div>
                     ))
                 ) : (
-                    <p>No certifications found.</p>
+                    <p className="gcert-not-found">No certifications found.</p>
                 )}
             </div>
 

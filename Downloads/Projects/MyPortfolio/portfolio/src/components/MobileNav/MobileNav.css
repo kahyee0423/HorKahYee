@@ -22,6 +22,10 @@
     align-items: center;
 }
 
+.mobile-menu-container .logo{
+    animation: none;
+}
+
 .mobile-menu.active{
     opacity: 1;
     transform: translateX(0);
@@ -39,9 +43,27 @@
     margin-left: -2rem;
 }
 
+.profile-btn-1{
+    background-color: #a993fe; 
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease;
+}
+
 @media (max-width: 769px){
     .mobile-menu {
         display: block;
+    }
+    .menu-item-1{
+        font-size: 1rem;
+        text-decoration: none;
+        color: #fff;
     }
 }
 

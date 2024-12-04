@@ -5,7 +5,7 @@
     padding: 1.5rem;
     margin: 0 1rem;
     height: 100%;
-    min-height: 500px;  /* Adjust as per your content needs */
+    min-height: 500px;  
     max-height: 500px;
     cursor: pointer;
 }
@@ -45,10 +45,35 @@
     top: 0.35rem;
 }
 
-@media (max-width: 768px){
-    .experience-card{
+@media (max-width: 768px) {
+    .experience-card {
         margin: 0;
-        min-height: 600px;  /* Adjust as per your content needs */
+        min-height: 600px;  
+        max-height: 600px;
+        padding: 1.2rem;     
+    }
+    .experience-card h6 {
+        font-size: 0.95rem;  
+    }
+    .duration {
+        font-size: 0.65rem;  
+        padding: 0.3rem 0.5rem;  
+    }
+    .experience-card ul li {
+        font-size: 0.75rem; 
+        margin-bottom: 0.4rem;  
+    }
+    .experience-card ul li::after {
+        width: 0.4rem;       
+        height: 0.4rem;
+        left: -1rem;   
+    }
+}
+
+@media (max-width: 870px){
+    .experience-card{
+        margin: 1 0.5rem;
+        min-height: 600px;
         max-height: 600px;
     }
     .experience-card h6{
@@ -59,52 +84,27 @@
     }
 }
 
-@media (max-width: 768px) {
-    .experience-card {
-        margin: 0;
-        min-height: 600px;  /* Increases height for smaller screens */
-        max-height: 600px;
-        padding: 1.2rem;     /* Reduces padding for better space management */
-    }
-    .experience-card h6 {
-        font-size: 0.95rem;  /* Slightly smaller heading for mobile */
-    }
-    .duration {
-        font-size: 0.65rem;  /* Adjusted size to fit smaller screen */
-        padding: 0.3rem 0.5rem;  /* Smaller padding for better appearance */
-    }
-    .experience-card ul li {
-        font-size: 0.75rem;  /* Adjusted list item font size */
-        margin-bottom: 0.4rem;  /* Reduced margin between list items */
-    }
-    .experience-card ul li::after {
-        width: 0.4rem;       /* Slightly smaller bullet point */
-        height: 0.4rem;
-        left: -1rem;         /* Adjust positioning for smaller screens */
-    }
-}
-
 @media (min-width: 1200px) {
     .experience-card {
-        margin: 0 2rem;           /* Increased margin for larger screens */
-        min-height: 500px;        /* Increase height to match larger screen */
+        margin: 0 2rem;          
+        min-height: 500px;       
         max-height: 500px;
-        padding: 2rem;            /* Increased padding for more spacious content */
+        padding: 2rem;           
     }
     .experience-card h6 {
-        font-size: 1.2rem;        /* Larger font size for heading */
+        font-size: 1.2rem;      
     }
     .duration {
-        font-size: 0.85rem;       /* Adjusted font size for better readability */
-        padding: 0.5rem 0.8rem;   /* Increased padding for a balanced appearance */
+        font-size: 0.85rem;    
+        padding: 0.5rem 0.8rem;  
     }
     .experience-card ul li {
-        font-size: 0.9rem;        /* Slightly larger font size for list items */
-        margin-bottom: 0.6rem;    /* Increased spacing between list items */
+        font-size: 0.9rem;     
+        margin-bottom: 0.6rem;   
     }
     .experience-card ul li::after {
-        width: 0.6rem;            /* Larger bullet point to match increased text size */
+        width: 0.6rem;           
         height: 0.6rem;
-        left: -1.5rem;            /* Adjust positioning for larger screens */
+        left: -1.5rem;         
     }
 }

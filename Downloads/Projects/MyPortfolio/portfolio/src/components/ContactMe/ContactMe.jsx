@@ -10,7 +10,7 @@ const ContactMe = () => {
         <div className="contact-content">
             
               <ContactInfoCard
-                iconUrl={`${process.env.PUBLIC_URL}/assets/generalPic/Gmail.png`}
+                iconUrl={`${process.env.PUBLIC_URL}/assets/generalPic/gmail.png`}
                 text="kahyee0423@gmail.com"
                 isLink={false}
               />
@@ -25,7 +25,7 @@ const ContactMe = () => {
                 isLink={true}
                 />
                 <ContactInfoCard
-                iconUrl={`${process.env.PUBLIC_URL}./assets/generalPic/linkedin.png`}
+                iconUrl={`${process.env.PUBLIC_URL}/assets/generalPic/linkedin.png`}
                 text="https://www.linkedin.com/in/kahyee0423/"
                 isLink={true}
                 />

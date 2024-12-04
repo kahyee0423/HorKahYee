@@ -7,7 +7,6 @@ export const AuroraGradientAnimated = () => {
   const color = useMotionValue(COLORS[0]);
 
   useEffect(() => {
-    // Animate the color changes in a loop
     animate(color, COLORS, {
       ease: "easeInOut",
       duration: 10,
@@ -21,9 +20,8 @@ export const AuroraGradientAnimated = () => {
   return (
     <motion.section
       style={{ backgroundImage }}
-      className="aurora-gradient" // Add this class
+      className="aurora-gradient"
     >
-      {/* Additional content can be added here */}
     </motion.section>
   );
 }

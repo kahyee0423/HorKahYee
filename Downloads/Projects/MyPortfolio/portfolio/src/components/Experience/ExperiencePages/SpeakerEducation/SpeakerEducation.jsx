@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
 import './SpeakerEducation.css';
-import AuroraGradientAnimated from '../../../AuroraGradientAnimated';
 
 const SpeakerEducation = () => {
   const navigate = useNavigate();
@@ -13,12 +12,12 @@ const SpeakerEducation = () => {
   }, []);
 
   const images = [
-    "assets/SpeakerEducationPic/img-01.jpg",
-    "assets/SpeakerEducationPic/img-02.jpg",
-    "assets/SpeakerEducationPic/img-03.jpg",
-    "assets/SpeakerEducationPic/img-04.jpg",
-    "assets/SpeakerEducationPic/img-05.jpg",
-    "assets/SpeakerEducationPic/img-06.png",
+    `${process.env.PUBLIC_URL}/assets/SpeakerEducationPic/img-01.jpg`,
+    `${process.env.PUBLIC_URL}/assets/SpeakerEducationPic/img-02.jpg`,
+    `${process.env.PUBLIC_URL}/assets/SpeakerEducationPic/img-03.jpg`,
+    `${process.env.PUBLIC_URL}/assets/SpeakerEducationPic/img-04.jpg`,
+    `${process.env.PUBLIC_URL}/assets/SpeakerEducationPic/img-05.jpg`,
+    `${process.env.PUBLIC_URL}/assets/SpeakerEducationPic/img-06.png`,
   ];
 
   const settings = {
@@ -49,12 +48,11 @@ const SpeakerEducation = () => {
 
   return (
     <div className="speaker-page-wrapper">
-      <AuroraGradientAnimated />
     <section className="speaker-container">
       <div className="heading">
-        <h1>
+        <h1 className="fredoka-font">
           My Journey As a
-          <span className="hidden-text"> Speaker </span> 
+          <span className="hidden-text-1"> Speaker </span> 
           for Education Sharing Workshop
         </h1>
       </div>
@@ -79,12 +77,12 @@ const SpeakerEducation = () => {
 
       <div className="speaker-content">
         <h2>Unveiling Excellence: Key Takeaways and Professional Growth from My Speaking Role in the Education Sharing Session</h2>
-        <div class="content-layout">
-  <div class="image-grid">
-    <img src="/assets/SpeakerEducationPic/img-10.png" alt="" />
-    <img src="/assets/SpeakerEducationPic/img-11.jpg" alt="" />
+        <div className="content-layout">
+  <div className="image-grid">
+    <img src={`${process.env.PUBLIC_URL}/assets/SpeakerEducationPic/img-10.png`} alt="" />
+    <img src={`${process.env.PUBLIC_URL}/assets/SpeakerEducationPic/img-11.jpg`} alt="" />
   </div>
-  <div class="text-content">
+  <div className="text-content">
     <h3>Premier Intellectual and Professional Gains from My Engagement</h3>
     <p>Public Speaking</p>
     <p>Networking Opportunities</p>
@@ -94,8 +92,8 @@ const SpeakerEducation = () => {
     <p>Motivation and Inspiration</p>
     <p>Teamwork Experience</p>
   </div>
-  <div class="image-extra">
-      <img src="/assets/speakerEducationPic/img-13.png" alt="" />
+  <div className="image-extra">
+      <img src={`${process.env.PUBLIC_URL}/assets/SpeakerEducationPic/img-13.png`} alt="" />
   </div>
 </div>
       </div>

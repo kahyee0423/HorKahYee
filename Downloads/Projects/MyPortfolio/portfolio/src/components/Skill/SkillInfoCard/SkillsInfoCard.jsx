@@ -19,7 +19,6 @@ const SkillsInfoCard = ({ heading, skills }) => {
       }
     );
 
-    // Store the current ref value in a variable for cleanup
     const currentCardRef = cardRef.current;
 
     if (currentCardRef) {
@@ -31,7 +30,7 @@ const SkillsInfoCard = ({ heading, skills }) => {
         observer.unobserve(currentCardRef);
       }
     };
-  }, []); // Dependency array remains empty as there are no dynamic dependencies
+  }, []);
 
   return (
     <div ref={cardRef} className="skills-info-card">

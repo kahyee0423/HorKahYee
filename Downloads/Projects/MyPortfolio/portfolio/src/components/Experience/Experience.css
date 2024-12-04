@@ -77,6 +77,12 @@
     }
 }
 
+@media(max-width: 811px){
+    .experience-container h5{
+        margin-left: -1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .experience-container h5 {
         font-size: 1.3rem;

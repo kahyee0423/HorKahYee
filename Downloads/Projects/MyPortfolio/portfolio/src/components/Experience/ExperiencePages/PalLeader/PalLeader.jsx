@@ -21,7 +21,6 @@ const PalLeader = () => {
 
       </div>
       
-      {/* Back to Home button */}
       <div class="button-container">
         <button className="button" onClick={() => navigate('/')}>Back To Home</button>
       </div>

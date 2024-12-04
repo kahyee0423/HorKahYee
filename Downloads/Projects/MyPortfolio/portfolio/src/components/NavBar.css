@@ -103,6 +103,16 @@
     }
 }
 
+@media (max-width: 805px){
+    .nav-content{
+        margin-left: -1.5rem;
+    }
+    .menu-item{
+        font-size: 12px;
+        margin-left: -2rem;
+    }
+}
+
 @media (max-width: 1325px) {
     .nav-wrapper {
         padding: 0 2rem;

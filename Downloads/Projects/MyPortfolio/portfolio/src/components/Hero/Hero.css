@@ -180,55 +180,55 @@
     cursor: pointer;
 }
     
-    .letter {
-        left: 10px; /* Adjusted position */
+.letter {
+        left: 10px;
         bottom: 0px;
         position: absolute;
-        width: 80px; /* Adjusted width */
-        height: 30px; /* Adjusted height */
+        width: 80px; 
+        height: 30px;
         background: white;
         z-index: 1;
         overflow: hidden;
         
         
-        .letter-border {
-            height: 5px; /* Reduced border height */
-            width: 100%;
-            background: repeating-linear-gradient(
+    .letter-border {
+        height: 5px; 
+        width: 100%;
+        background: repeating-linear-gradient(
                 -45deg,
                 #cb5a5e,
                 #cb5a5e 8px,
                 transparent 8px,
                 transparent 18px
-            );
-        }
-        
-        .letter-title {
-            margin-top: 5px; /* Adjusted margin */
-            margin-left: 3px; /* Adjusted margin */
-            height: 5px; /* Adjusted height */
-            width: 40%;
-            background: #cb5a5e;
-        }
-        
-        .letter-context {
-            margin-top: 5px; /* Adjusted margin */
-            margin-left: 3px; /* Adjusted margin */
-            height: 5px; /* Adjusted height */
-            width: 20%;
-            background: #cb5a5e;
-        }
-        
-        .letter-stamp {
-            margin-top: 15px; 
-            margin-left: 55px; 
-            border-radius: 100%;
-            height: 20px; 
-            width: 20px; 
-            background: #cb5a5e;
-            opacity: 0.3;
-        }
+        );
     }
+        
+    .letter-title {
+        margin-top: 5px; 
+        margin-left: 3px; 
+        height: 5px; 
+        width: 40%;
+        background: #cb5a5e;
+    }
+        
+    .letter-context {
+        margin-top: 5px; 
+        margin-left: 3px; 
+        height: 5px; 
+        width: 20%;
+        background: #cb5a5e;
+    }
+        
+    .letter-stamp {
+        margin-top: 15px; 
+        margin-left: 55px; 
+        border-radius: 100%;
+        height: 20px; 
+        width: 20px; 
+        background: #cb5a5e;
+        opacity: 0.3;
+    }
+}
 
 .letter-image:hover {
     .animated-mail .letter {
@@ -272,6 +272,7 @@
     justify-content: space-between;
     height: 100%;
     color: #0e0d0d;
+    user-select: none;
 }
 
 .close-paper-button {
@@ -296,14 +297,15 @@
     font-style: normal;
 }
 
-@media (max-width: 1280px){
+@media (max-width: 1389px){
     .letter-image {
         width: 30px; 
         height: 30px; 
-        margin-top: 1rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
     }
 
-.letter {
+    .letter {
         width: 83px;
         height: 25px;
     }
@@ -317,26 +319,27 @@
     }
 }
 
-@media(max-width: 1136px){
+@media(max-width: 1150px){
     .letter-image {
-        margin-left: 2rem;
+        margin-top: 2rem;
+        margin-left: 3rem;
     }
     .hero-content h2{
-        font-size: 58px;
+        font-size: 50px;
     }
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1050px) {
     
     .letter-image {
-        width: 30px; /* Reduced width */
-        height: 30px; /* Reduced height */
+        width: 30px; 
+        height: 30px; 
         margin-left: 5rem;
         margin-top: 2rem;
     }
-.letter {
-        width: 83px; /* Reduced width */
-        height: 25px; /* Reduced height */
+    .letter {
+        width: 83px; 
+        height: 25px; 
     }
     .cert-icon-container{
         margin-left: 2rem;
@@ -352,10 +355,20 @@
         font-size: 55px;
     }
 }
+@media(max-width: 975px){
+    .hero-content h2{ 
+        margin-top: 5rem;
+        font-size: 47px;
+    }
+    .letter-image{
+        margin-top: 5rem;
+        margin-left: 6rem;
+    }
+}
 
 @media (max-width: 950px) {
     .hero-content{
-        margin-top: 3rem;
+        margin-top: rem;
     }
     .hero-content h2{
         font-size: 42px;
@@ -365,14 +378,14 @@
     }
 
     .letter-image {
-        width: 15px;  /* Adjust as needed */
-        height: 15px; /* Maintain aspect ratio */
-        margin-left: 1rem;
-        margin-top: 1.5rem;
+        width: 15px;  
+        height: 15px; 
+        margin-left: 1.5rem;
+        margin-top: 5rem;
     }
-.letter {
-        width: 85px;  /* Adjust based on design */
-        height: 25px; /* Keep aspect ratio in mind */
+    .letter {
+        width: 85px;  
+        height: 25px; 
     }
     .cert-icon-container{
         margin-left: 2rem;
@@ -382,28 +395,96 @@
         width: 5rem;
     }
     .view-resume-btn{
-        width: 11.5rem;
-        font-size: 10px;
+        width: 15rem;
+        font-size: 14px;
         padding: 0.8rem;
+    }
+}
+
+@media(max-width: 870px){
+    .hero-container {
+        flex-direction: column;
+        padding: 1rem; 
+    }
+    .hero-img {
+        margin-top: 1rem; 
+    }
+    .hero-img .main-image img {
+        width: 100%; 
+        max-width: 600px; 
+        height: auto; 
+    }
+    .hero-content {
+        margin-top: 0; 
+        text-align: center; 
+    }
+    .hero-content h2 {
+        font-size: 4rem;
+        line-height: 3.5rem;
+        margin-bottom: 7rem;
+    }
+    .hero-content p {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+    .view-resume-btn {
+        font-size: 1rem;
+        width: 20rem;
+        margin-bottom: 4rem;
+    }
+    .icon-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 30rem;
+    }
+    .cert-icon-container{
+        width: 65rem;
+        max-width: 60%;
+        margin-left: -3rem;
+    }
+    .cert-icon img{
+        width: 10rem;
+    }
+    .letter-image {
+        width: 50px; 
+        height: 50px; 
+        margin-top: 48rem;
+        margin-left: 16rem;
+    }
+    .letter {
+        width: 83px;
+        height: 25px; 
+    }
+
+    .profile-btn{
+        margin-left: -10rem;
+    }
+
+    .white-paper{
+        width: 40rem;
+        height: 45rem;
     }
 }
 
 @media (max-width: 768px) {
     .hero-container {
         flex-direction: column;
-        padding: 1rem; /* Reduced padding for smaller screens */
+        padding: 1rem; 
     }
     .hero-img {
-        margin-top: 1rem; /* Adjust margin for smaller screens */
+        margin-top: 1rem; 
     }
     .hero-img .main-image img {
-        width: 100%; /* Set image to take full width */
-        max-width: 600px; /* Increase the max-width */
-        height: auto; /* Ensure aspect ratio is maintained */
+        width: 100%; 
+        max-width: 600px; 
+        height: auto; 
     }
     .hero-content {
-        margin-top: 0; /* Reset margin for better visibility */
-        text-align: center; /* Center align text */
+        margin-top: 0; 
+        text-align: center; 
     }
     .hero-content h2 {
         font-size: 4rem;
@@ -449,14 +530,14 @@
         width: 10rem;
     }
     .letter-image {
-        width: 50px; /* Reduced width */
-        height: 50px; /* Reduced height */
+        width: 50px; 
+        height: 50px; 
         margin-top: 40rem;
         margin-left: 16rem;
     }
-.letter {
-        width: 83px; /* Reduced width */
-        height: 25px; /* Reduced height */
+    .letter {
+        width: 83px;
+        height: 25px; 
     }
 
     .profile-btn{
@@ -469,24 +550,50 @@
     }
 }
 
+@media(max-width: 755px){
+    .letter-image{
+        margin-top: 48rem;
+    }
+}
+
 @media (max-width: 600px) {
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; 
+        margin-top: -5rem;
+    }
+
+    .hero-content {
+        width: 100%; 
+        text-align: center; 
+    }
+
     .hero-content h2 {
         font-size: 2.2rem;
         line-height: 3rem;
         margin-bottom: 1.5rem;
     }
+
     .hero-content p {
         font-size: 0.8rem;
         line-height: 1.3rem;
         margin: 0 auto;
     }
+
     .hero-img {
+        width: 100%; 
         gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
     }
+
     .hero-img .main-image img {
-        width: 100%; /* Set image to take full width */
-        max-width: 300px; /* Increase the max-width */
-        height: auto; /* Ensure aspect ratio is maintained */
+        width: 100%;
+        max-width: 300px; 
+        height: auto; 
     }
 
     .view-resume-btn {
@@ -494,48 +601,56 @@
         width: 20rem;
     }
 
-    .icon-wrapper{
+    .icon-wrapper {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centers the icons horizontally */
+        align-items: center;
         justify-content: center;
-        margin: 0.5rem 0; /* Adjusts vertical margin for better spacing */
-        margin-left: 23rem;
-    }
-    .cert-icon-container{
-        width: 38rem;
-        max-width: 60%;
-        margin-left: -5rem;
-    }
-    .cert-icon img{
-        width: 5rem;
-    }
-    .letter-image {
-        width: 50px; /* Reduced width */
-        height: 50px; /* Reduced height */
-        margin-top: 21rem;
-        margin-left: 10rem;
-    }
-.letter {
-        width: 80px; /* Reduced width */
-        height: 25px; /* Reduced height */
+        margin: 0.5rem 0;
+        width: 100%; 
     }
 
-    .profile-btn{
-        margin-left: -10rem;
+    .cert-icon-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 1rem; 
+        width: 100%; 
+        margin-left: 5rem; 
     }
-    .paper-content{
+
+    .cert-icon img {
+        width: 5rem; 
+    }
+
+    .letter-image {
+        width: 50px; 
+        height: 50px; 
+        margin-top: 29rem;
+        margin-left: 9rem; 
+    }
+
+    .letter {
+        width: 80px;
+        height: 25px; 
+    }
+
+    .profile-btn {
+        margin-left: -9rem; 
+    }
+
+    .paper-content {
         font-size: 10px;
     }
-    .white-paper{
+
+    .white-paper {
         width: 20rem;
         height: 35rem;
     }
 }
 
-@media(max-width: 425px){
-    .white-paper{
-        width: 20rem;
-        height: 35rem;
+@media(max-width: 321px){
+    .letter-image{
+        margin-top: 37rem;
     }
 }

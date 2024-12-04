@@ -41,12 +41,11 @@ const Experience = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Stop observing after becoming visible
+          observer.disconnect(); 
         }
       });
     });
 
-    // Store the current ref value in a local variable
     const currentExperienceRef = experienceRef.current;
 
     if (currentExperienceRef) {
@@ -58,7 +57,7 @@ const Experience = () => {
         observer.unobserve(currentExperienceRef);
       }
     };
-  }, []); // Dependency array remains empty as there are no dynamic dependencies
+  }, []);
 
   return (
     <section className={`experience-container ${isVisible ? 'animate' : ''}`} ref={experienceRef}>

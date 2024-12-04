@@ -27,12 +27,12 @@ const Hero = () => {
             <div className="hero-content">
                 <h2>Hi, I am Kah Yee</h2>
                 <p>A Year 2 USM Computer Science Student</p>
-                <p>EXCO @ EPCD GDSC USM</p>
+                <p>Head of Department @ EPCD GDGoC USM</p>
                 <p>Google Cloud Data Analytics Certified</p>
                 <p>Google Cloud Computing Certified</p>
                 <p>Google Cloud Cybersecurity Certified</p>
                 <p>Google Cloud Innovator</p>
-                <p>Woman In Techmakers Members</p>
+                <p>Alibaba Cloud Certified Associate</p>
                 <div className="resume-button-container">
                     <a 
                         href="https://drive.google.com/file/d/12BnFbBJ5briyZb-1JaFojQ33_ealr7d_/view?usp=sharing" 
@@ -71,7 +71,7 @@ const Hero = () => {
                             <a href="https://www.credly.com/badges/26a19e43-500c-46e1-a47a-2f107b436bd0/public_url"><img src={`${process.env.PUBLIC_URL}/assets/generalPic/data-cert.png`} alt="" /></a>
                         </div> 
                         <div className="cert-icon">
-                            <a href="https://skillshop.credential.net/7d65c318-9151-4af9-ba8d-64e9bf3bdadc"><img src={`${process.env.PUBLIC_URL}assets/googleCloudCert/google_cert.png`} alt="" /></a>
+                            <a href="https://skillshop.credential.net/7d65c318-9151-4af9-ba8d-64e9bf3bdadc"><img src={`${process.env.PUBLIC_URL}/assets/GoogleCloudCert/google_cert.png`} alt="" /></a>
                         </div>
                         <div className="cert-icon">
                             <a href="https://www.credly.com/badges/b497837f-43fa-44cb-b7a4-7797ece0325b/public_url"><img src={`${process.env.PUBLIC_URL}/assets/generalPic/cloud-cert-2.png`} alt="" /></a>
@@ -96,9 +96,11 @@ const Hero = () => {
                     <div className="paper-content">
                         <h2 className="caveat-brush-regular">Here is a Letter for You: </h2>
                         <h3>"A Glimpse into My Journey"</h3>
-                        <p>Kah Yee is an ambitious second-year student at the University of Science, Malaysia, where she is diligently pursuing a Bachelor of Computer Science (Honours) degree, maintaining an impressive CGPA of 3.64. Her academic journey commenced with distinction, achieving a perfect CGPA of 4.0 at Kolej Matrikulasi Perak and securing 10As in the Malaysian SPM examination.</p>
-                        <p>Proficient in multiple languages, including Chinese, Malay, English, and French, Kah Yee stands out as a key figure in the Google Developer Student Club (GDSC) USM, currently serving as an Executive Committee member in the Event Planning and Culture Development Department. Her extensive experience includes emceeing and facilitating workshops, as well as orchestrating innovative projects that leverage data analysis and software development using Python and C++.</p>
-                        <p>Noteworthy among her accolades is the Silver Award at the Pre-University Matriculation Innovation Competition 2023, complemented by her certifications as a Google Cloud Innovator and holder of various prestigious Google and Alibaba Cloud credentials. Kah Yee's diverse interests in badminton, chess, and photography further enrich her profile, exemplifying her multifaceted talents and commitment to excellence.</p>
+                        <p>She is a certified professional in cloud and analytics technologies, holding credentials from Google Cloud (Data Analytics, Computing Foundations, Cybersecurity), Alibaba Cloud (Certified Associate), and Google Analytics. Recognized as an AWS AI & ML Scholar, she is currently advancing her expertise in AI programming while earning multiple skill badges through Google Cloud and Alibaba Cloud programs.</p>
+                        <p>Fluent in five languages, including Chinese, Malay, English, French, and Japanese, she leverages her linguistic abilities for effective communication and collaboration. Her leadership skills shine through her active roles in the Google Developer Group On Campus (GDGoC USM), where she has served as the EXCO for the department of Event Planning and Culture Development and now leads the department.</p>
+                        <p>She has contributed significantly to her field by emceeing workshops, facilitating technical sessions, and speaking on topics like front-end development with Angular. Additionally, she has been part of organizing university-level hackathons and received a Silver Award at the Pre-University Matriculation Innovation Competition (PIITRAM 2023) for her innovative project certified by MYIPO.</p>
+                        <p>Her technical portfolio includes projects in predictive modeling for market trends and wine quality using Python and the development of a bakery management system utilizing object-oriented programming in C++. As a collaborative team player, she excels in event planning and workshop facilitation, showcasing strong verbal communication and leadership capabilities.</p>
+                        <p>Dedicated to continuous learning, she actively participates in programs like AI Skills Quest while expanding her technical knowledge in areas such as PostgreSQL and Oracle SQL. Outside of academics and professional pursuits, she enjoys badminton, chess, and photography, which demonstrating a well-rounded and dynamic approach to personal and professional growth.</p>
                         
                         <button onClick={toggleWhitePaper} className="close-paper-button">Close</button>
                     </div>

@@ -35,7 +35,7 @@ const NavBar = () => {
                 style={{ transform: visible ? 'translateY(0)' : 'translateY(-100%)' }}
             >
                 <div className="nav-content">
-                    <img className="logo" src="./assets/generalPic/Name2.png" alt="" />
+                    <img className="logo" src={`${process.env.PUBLIC_URL}/assets/generalPic/Name2.png`} alt="" />
 
                     <ul>
                         <li>
@@ -60,7 +60,6 @@ const NavBar = () => {
                 </div>
             </nav>
 
-            {/* Hover area to trigger navbar visibility */}
             <div 
                 className="nav-hover-area" 
                 onMouseEnter={() => setVisible(true)} 
